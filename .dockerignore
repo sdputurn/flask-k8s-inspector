@@ -2,3 +2,4 @@
 *
 #except 
 !*.py
+!requirements.txt
