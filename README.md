@@ -1,0 +1,1 @@
+### a simple python flask based application to extract information from k8s
