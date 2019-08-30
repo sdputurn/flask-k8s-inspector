@@ -2,6 +2,7 @@ import time
 
 import redis
 from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 cache = redis.Redis(host='redis', port=6379)
@@ -19,7 +20,20 @@ def get_hit_count():
             time.sleep(0.5)
 
 
-@app.route('/')
+@app.route('/html')
 def hello():
+    '''
+    doc string
+    '''
     # count = get_hit_count()
-    return 'Hello World! new features will be added soon '
+    # return 'Hello World! new features will be added soon '
+    message = "hello world!!"
+    return render_template('index.html', message=message)
+
+@app.route('/')
+def base():
+    '''
+    doc string
+    '''
+    # count = get_hit_count()
+    return 'Hello World! new features will be added soon'
