@@ -22,4 +22,4 @@ def get_hit_count():
 @app.route('/')
 def hello():
     # count = get_hit_count()
-    return 'Hello World! will add new fetures soon'
+    return 'Hello World! new features will be added soon '
