@@ -3,8 +3,11 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        build 'it will be docker build'
+        sh 'echo $mytest success'
       }
     }
+  }
+  environment {
+    mytest = 'pipeline'
   }
 }
