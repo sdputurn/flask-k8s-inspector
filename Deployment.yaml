@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: falsk-k8s-inspector-deployment
+  labels:
+    app: falsk-k8s-inspector
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: falsk-k8s-inspector
+  template:
+    metadata:
+      labels:
+        app: falsk-k8s-inspector
+    spec:
+      containers:
+      - name: C1
+        image: sdputurn/falsk-k8s-inspector:latest
+        ports:
+        - containerPort: 5000
