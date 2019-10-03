@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: c1
-        image: sdputurn/falsk-k8s-inspector:latest
+        imagePullPolicy: Always
+        image: sdputurn/flask-k8s-inspector:latest
         ports:
         - containerPort: 5000
