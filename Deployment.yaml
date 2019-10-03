@@ -15,7 +15,7 @@ spec:
         app: falsk-k8s-inspector
     spec:
       containers:
-      - name: C1
+      - name: c1
         image: sdputurn/falsk-k8s-inspector:latest
         ports:
         - containerPort: 5000
