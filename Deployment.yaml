@@ -5,7 +5,7 @@ metadata:
   labels:
     app: falsk-k8s-inspector
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: falsk-k8s-inspector
