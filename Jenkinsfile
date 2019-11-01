@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh "pwd && whoami"
+                sh "pwd "
                 sh "touch abc.txt"
             }
         }
