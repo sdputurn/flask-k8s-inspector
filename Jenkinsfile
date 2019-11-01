@@ -5,10 +5,7 @@ pipeline {
             steps {
                 sh 'python --version'
                 sh "pip install -r requirements.txt"
-                sh "whoami"
-                sh "echo $(pwd) +++++ ${BUILD_NUMBER} > ${BUILD_NUMBER}.txt"
-                sh "ls -ltr"
-                
+                sh "echo ${BUILD_NUMBER} $(pwd)"
             }
         }
     }
