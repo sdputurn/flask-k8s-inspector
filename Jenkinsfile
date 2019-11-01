@@ -5,7 +5,14 @@ pipeline {
             steps {
                 sh 'python --version'
                 sh "pip install -r requirements.txt"
+                sh "pwd && whoami"
+                sh "touch abc.txt"
             }
+        }
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: '*.txt', fingerprint: true
         }
     }
 }
