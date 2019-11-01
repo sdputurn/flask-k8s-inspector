@@ -1,17 +1,24 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'python --version'
-                sh "pwd "
-                sh "touch abc.txt"
-            }
-        }
+  agent {
+    docker {
+      image 'python:3.5.1'
     }
-    post {
-        always {
-            archiveArtifacts artifacts: '*.txt', fingerprint: true
-        }
+
+  }
+  stages {
+    stage('build') {
+      steps {
+        sh 'python --version'
+        sh 'pwd '
+        sh 'touch abc.txt'
+      }
     }
+  }
+  post {
+    always {
+      archiveArtifacts(artifacts: '*.txt', fingerprint: true)
+
+    }
+
+  }
 }
